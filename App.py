@@ -4,7 +4,7 @@ import openai
 import os
 
 # openai.api_key = "API KEY"
-openai.api_key = os.getenv("OPENAI_API_KEY")
+openai.api_key = os.environ.get("OPENAI_API_KEY")
 
 st.set_page_config(
     page_title="DALL·E 2 Image Generator",
@@ -49,22 +49,26 @@ selected_size = st.selectbox("Select image size:", size_options)
 
 if st.button("See Magic🪄"):
     # Generate image
-    response = openai.Image.create(
-        prompt=prompt,
-        n=1,
-        size=selected_size,
-        response_format="b64_json",
-    )
+    try:
+        response = openai.Image.create(
+            prompt=prompt,
+            n=1,
+            size=selected_size,
+            response_format="b64_json",
+        )
 
-    # Display image
+        # Display image
 
-    if response["data"]:
-        image_data = base64.b64decode(response["data"][0]["b64_json"])
-        st.image(image_data, use_column_width=True)
+        if response["data"]:
+            image_data = base64.b64decode(response["data"][0]["b64_json"])
+            st.image(image_data, use_column_width=True)
 
-        # Download button
-        b64_image = base64.b64encode(image_data).decode()
-        href = f'<a class="download-button" href="data:image/png;base64,{b64_image}" download="generated_image.png">Download</a>'
-        st.markdown(href, unsafe_allow_html=True)
-    else:
-        st.warning("No image generated.")
+            # Download button
+            b64_image = base64.b64encode(image_data).decode()
+            href = f'<a class="download-button" href="data:image/png;base64,{b64_image}" download="generated_image.png">Download</a>'
+            st.markdown(href, unsafe_allow_html=True)
+        else:
+            st.warning("No image generated.")
+    except Exception as e:
+        st.error(e)
+        print(e)
