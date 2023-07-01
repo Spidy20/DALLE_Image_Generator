@@ -3,11 +3,15 @@
 [![forthebadge made-with-python](http://ForTheBadge.com/images/badges/made-with-python.svg)](https://www.python.org/)
 [![Python 3.8](https://img.shields.io/badge/python-3.8-blue.svg)](https://www.python.org/downloads/release/python-360/)
 
+## [Watch the Tutorial for this Project](https://youtu.be/Fej2wb4YHes)
+
+![YouTube Thumbnail](https://github.com/Spidy20/DALLE_Image_Generator/blob/master/yt_thumb.jpg)
+
 ## Overview
 
 This project demonstrates the creation of a "Text to Image" application using Python, OpenAI, and Streamlit. The following technologies and services are used:
 
-- `Streamlit` as a server and handling frontend.
+- `Streamlit` as a server and handling front end.
 - OpenAI API key from `OpenAI`.
 - `DALL.E-2` model for text-to-image generation. 
 - `AWS EC2` for deployment (24/7 running).
@@ -55,7 +59,7 @@ For a more detailed explanation of this project, refer to the tutorial on the Ma
 
 ## Screenshots
 
-<img src="https://github.com/Spidy20/ChatGPT_Whatsapp_Bot/blob/master/sc_1.jpg" width="270" height="500">
+<img src="https://github.com/Spidy20/DALLE_Image_Generator/blob/master/sc1.jpg" width="270" height="500">
 
 ## Support
 
