@@ -3,7 +3,7 @@
 [![forthebadge made-with-python](http://ForTheBadge.com/images/badges/made-with-python.svg)](https://www.python.org/)
 [![Python 3.8](https://img.shields.io/badge/python-3.8-blue.svg)](https://www.python.org/downloads/release/python-360/)
 
-## [Watch the Tutorial for this Project](https://youtu.be/Fej2wb4YHes)
+## [Watch the Tutorial for this Project](https://youtu.be/Ihcb3Lg4twI)
 
 ![YouTube Thumbnail](https://github.com/Spidy20/DALLE_Image_Generator/blob/master/yt_thumb.jpg)
 
