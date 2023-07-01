@@ -1,8 +1,10 @@
 import base64
 import streamlit as st
 import openai
+import os
 
-openai.api_key = "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"
+# openai.api_key = "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"
+openai.api_key = os.getenv("OPENAI_API_KEY")
 
 st.set_page_config(
     page_title="DALL·E 2 Image Generator",
