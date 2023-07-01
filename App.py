@@ -3,7 +3,7 @@ import streamlit as st
 import openai
 import os
 
-# openai.api_key = "API KEY"
+# openai.api_key = ""
 openai.api_key = os.environ.get("OPENAI_API_KEY")
 
 st.set_page_config(
